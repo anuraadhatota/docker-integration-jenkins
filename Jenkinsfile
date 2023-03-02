@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t anuraadhatota/docker-integration-jenkins .'
+                    sh 'docker build -t docker-account/docker-integration-jenkins .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                    sh 'docker login -u docker-account -p ${dockerhubpwd}'
 
 }
-                   sh 'docker push anuraadhatota/docker-integration-jenkins'
+                   sh 'docker push docker-account/docker-integration-jenkins'
                 }
             }
         }
