@@ -1,7 +1,3 @@
-FROM ubuntu
-WORKDIR /usr/src/app
-COPY package*.json ./
-RUN npm install
-COpy ..
-EXPOSE 3000
-CMD ["node", "index.js"]
+FROM tomcat:8.0.20-jre8
+# Dummy text to test 
+COPY target/*docker-integration-jenkins.war /usr/local/tomcat/webapps/docker-integration-jenkins.war
